@@ -12,7 +12,7 @@ namespace App
         public DateTime Date { set; get; }
         public string Goods { set; get; }
         public int ClientId { set; get; }
-        public Client Client { set; get; }  
+        public Client Client { set; get; } 
         public int Quantity { set; get; }
     }
 }
