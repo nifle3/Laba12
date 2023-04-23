@@ -11,7 +11,8 @@ namespace App
         public DbSet<Client> Clients { get; set; }
         public DbSet<Selling> sellings { get; set; }
 
-        public Context(DbContextOptions<Context> options) :base(options) { }
+        public Context()=>
+            Database.EnsureCreated();
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)=>
             optionsBuilder.UseSqlServer(ConnectionString);
