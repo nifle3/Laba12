@@ -5,10 +5,10 @@ namespace App
 {
     internal static class AccountSystem
     {
-        public static bool isExist(string email, string pass)
+        public static bool IsExist(string email, string pass)
         {
             bool a = false;
-            using (Context db = new())
+            using (Context db = new Context())
             {
                 foreach (Client client in db.Clients)
                 {
@@ -19,16 +19,38 @@ namespace App
             }
             return a;
         }
-
-        public static async void AddNewAccount(Client client)
+        public static bool CheckUniqueEmail(string email)
         {
             using (Context db = new())
             {
-                await Task.Run(() =>
+                foreach (Client client in db.Clients)
                 {
-                    db.Clients.Add(client);
-                    db.SaveChanges();
-                });
+                    if (client.Email == email)
+                        return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool CheckUniquePhone(string phone)
+        {
+            using (Context db = new())
+            {
+                foreach (Client client in db.Clients)
+                {
+                    if (client.PhoneNumber == phone)
+                        return false;
+                }
+            }
+            return true;
+        }
+
+        public static void AddNewAccount(Client client)
+        {
+            using (Context db = new())
+            {
+                db.Clients.Add(client);
+                db.SaveChanges();
             }
         }
     }

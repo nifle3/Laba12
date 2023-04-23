@@ -1,21 +1,21 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using System;
 
 namespace App
 {
     internal class Context : DbContext
     {
-        private const string ConnectionString = "Data\r\nSource=(localdb)\\\\mssqllocaldb;Initial Catalog=StoreDb;Integrated\r\nSecurity=True;";
+        private const string connectionString = 
+            @"Server=(localdb)\mssqllocaldb;Database=Laba12Db;Trusted_Connection=True;";
 
-        public DbSet<Client> Clients { get; set; }
-        public DbSet<Selling> sellings { get; set; }
+        public DbSet<Client> Clients => Set<Client>();
+        public DbSet<Selling> Sellings => Set<Selling>();
 
         public Context()=>
             Database.EnsureCreated();
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)=>
-            optionsBuilder.UseSqlServer(ConnectionString);
+            optionsBuilder.UseSqlServer(connectionString);
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

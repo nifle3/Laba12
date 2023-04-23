@@ -7,20 +7,21 @@ namespace App
             InitializeComponent();
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            bool isexist = await AccountSystem.isExist(NameTB.Text, PassTb.Text);
+            bool isexist = AccountSystem.IsExist(NameTB.Text, PassTb.Text);
 
             if (!isexist)
                 return;
 
-            InfoForm form = new InfoForm();
-            form.Show();
+            InfoForm form = new();
+            form.ShowDialog();
         }   
 
         private void NewAccButton_Click(object sender, EventArgs e)
         {
-
+            RegestrationForm form = new();
+            form.ShowDialog();
         }
     }
 }
