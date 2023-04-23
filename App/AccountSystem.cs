@@ -5,20 +5,19 @@ namespace App
 {
     internal static class AccountSystem
     {
-        public static bool IsExist(string email, string pass)
+        public static (bool, Client?) IsExist(string email, string pass)
         {
-            bool a = false;
             using (Context db = new Context())
             {
                 foreach (Client client in db.Clients)
                 {
                     if (client.Password == pass && client.Email == email)
-                        a = true;
+                        return (true, client);
                 }
-                a = false;
             }
-            return a;
+            return (false, null);
         }
+
         public static bool CheckUniqueEmail(string email)
         {
             using (Context db = new())

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace App
 {
-    internal class Client
+    public class Client
     {
         public int ID { get; set; }
         public string Name { get; set; }

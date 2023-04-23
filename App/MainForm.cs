@@ -9,12 +9,14 @@ namespace App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool isexist = AccountSystem.IsExist(NameTB.Text, PassTb.Text);
+            bool isexist;
+            Client? client;
+            (isexist, client) = AccountSystem.IsExist(NameTB.Text, PassTb.Text);
 
             if (!isexist)
                 return;
 
-            InfoForm form = new();
+            InfoForm form = new(client);
             form.ShowDialog();
         }   
 

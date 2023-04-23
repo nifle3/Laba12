@@ -28,12 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.CreateBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(613, 426);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.Location = new System.Drawing.Point(631, 41);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(75, 23);
+            this.DeleteBtn.TabIndex = 1;
+            this.DeleteBtn.Text = "Удалить";
+            this.DeleteBtn.UseVisualStyleBackColor = true;
+            // 
+            // CreateBtn
+            // 
+            this.CreateBtn.Location = new System.Drawing.Point(631, 12);
+            this.CreateBtn.Name = "CreateBtn";
+            this.CreateBtn.Size = new System.Drawing.Size(75, 23);
+            this.CreateBtn.TabIndex = 2;
+            this.CreateBtn.Text = "Создать";
+            this.CreateBtn.UseVisualStyleBackColor = true;
+            // 
+            // InfoForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(712, 450);
+            this.Controls.Add(this.CreateBtn);
+            this.Controls.Add(this.DeleteBtn);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "InfoForm";
             this.Text = "InfoForm";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
+        private Button DeleteBtn;
+        private Button CreateBtn;
     }
 }

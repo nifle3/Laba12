@@ -12,9 +12,16 @@ namespace App
 {
     public partial class InfoForm : Form
     {
-        public InfoForm()
+        private Client client;
+
+        public InfoForm(Client client)
         {
             InitializeComponent();
+            this.client = client;
+            using (Context con = new()) 
+            {
+                dataGridView1.DataSource = con.Sellings;
+            }
         }
     }
 }

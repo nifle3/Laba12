@@ -2,7 +2,7 @@
 
 namespace App
 {
-    internal class Selling
+    public class Selling
     {
         public int ID { set; get; }
         public DateTime Date { set; get; }
