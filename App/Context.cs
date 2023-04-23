@@ -3,10 +3,10 @@ using System;
 
 namespace App
 {
-    internal class Context : DbContext
+    public class Context : DbContext
     {
         private const string connectionString = 
-            @"Server=(localdb)\mssqllocaldb;Database=Laba12Db;Trusted_Connection=True;";
+            @"Server=(localdb)\mssqllocaldb;Database=Laba12Dbv2;Trusted_Connection=True;";
 
         public DbSet<Client> Clients => Set<Client>();
         public DbSet<Selling> Sellings => Set<Selling>();

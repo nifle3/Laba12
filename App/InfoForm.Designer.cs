@@ -61,6 +61,7 @@
             this.CreateBtn.TabIndex = 2;
             this.CreateBtn.Text = "Создать";
             this.CreateBtn.UseVisualStyleBackColor = true;
+            this.CreateBtn.Click += new System.EventHandler(this.CreateBtn_Click);
             // 
             // InfoForm
             // 
@@ -72,6 +73,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "InfoForm";
             this.Text = "InfoForm";
+            this.Activated += new System.EventHandler(this.InfoForm_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

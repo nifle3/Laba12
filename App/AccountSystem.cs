@@ -7,11 +7,12 @@ namespace App
     {
         public static (bool, Client?) IsExist(string email, string pass)
         {
+            string hashpass = HashPass.GetHashString(pass);
             using (Context db = new Context())
             {
                 foreach (Client client in db.Clients)
                 {
-                    if (client.Password == pass && client.Email == email)
+                    if (client.Password == hashpass && client.Email == email)
                         return (true, client);
                 }
             }
