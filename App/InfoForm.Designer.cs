@@ -31,6 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.CreateBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,12 +42,12 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(613, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(788, 426);
             this.dataGridView1.TabIndex = 0;
             // 
             // DeleteBtn
             // 
-            this.DeleteBtn.Location = new System.Drawing.Point(631, 41);
+            this.DeleteBtn.Location = new System.Drawing.Point(806, 41);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(75, 23);
             this.DeleteBtn.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // CreateBtn
             // 
-            this.CreateBtn.Location = new System.Drawing.Point(631, 12);
+            this.CreateBtn.Location = new System.Drawing.Point(806, 12);
             this.CreateBtn.Name = "CreateBtn";
             this.CreateBtn.Size = new System.Drawing.Size(75, 23);
             this.CreateBtn.TabIndex = 2;
@@ -64,11 +65,22 @@
             this.CreateBtn.UseVisualStyleBackColor = true;
             this.CreateBtn.Click += new System.EventHandler(this.CreateBtn_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(806, 70);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Статус";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // InfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 450);
+            this.ClientSize = new System.Drawing.Size(893, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.CreateBtn);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.dataGridView1);
@@ -85,5 +97,6 @@
         private DataGridView dataGridView1;
         private Button DeleteBtn;
         private Button CreateBtn;
+        private Button button1;
     }
 }

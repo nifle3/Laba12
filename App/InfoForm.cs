@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -51,13 +52,12 @@ namespace App
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
+            Selling? selling = GetSellingByGrid();
+
+            if (selling is null)
                 return;
 
-            var item = dataGridView1.SelectedRows[0];
-            Selling selling = (Selling)item.DataBoundItem;
-
-            DeleteSelling(Selling);
+            DeleteSelling(selling);
             UpdateSource();
         }
 
@@ -69,6 +69,26 @@ namespace App
                 context.Sellings.Remove(selling);
                 context.SaveChanges();
             }
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Selling? selling = GetSellingByGrid();
+
+            if (selling is null)
+                return;
+
+            ChangeStatusForm form = new(selling);
+            form.ShowDialog();
+        }
+
+        private Selling? GetSellingByGrid()
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+                return null;
+
+            var item = dataGridView1.SelectedRows[0];
+            return (Selling)item.DataBoundItem;
         }
     }
 }
