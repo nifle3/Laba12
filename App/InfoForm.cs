@@ -37,11 +37,38 @@ namespace App
 
         private void InfoForm_Activated(object sender, EventArgs e)
         {
+            UpdateSource();
+        }
+
+        private void UpdateSource()
+        {
             using (Context context = new())
             {
                 _client.Sellings = context.Sellings.Where(b => b.ClientId == _client.ID).ToList();
             }
             dataGridView1.DataSource = _client.Sellings;
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+                return;
+
+            var item = dataGridView1.SelectedRows[0];
+            Selling selling = (Selling)item.DataBoundItem;
+
+            DeleteSelling(Selling);
+            UpdateSource();
+        }
+
+        private void DeleteSelling(Selling selling)
+        {
+            using (Context context = new())
+            {
+                _client.Sellings.Remove(selling);
+                context.Sellings.Remove(selling);
+                context.SaveChanges();
+            }
         }
     }
 }
