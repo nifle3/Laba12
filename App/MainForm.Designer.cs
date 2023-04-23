@@ -76,6 +76,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Войти";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // NewAccButton
             // 
@@ -85,6 +86,7 @@
             this.NewAccButton.TabIndex = 5;
             this.NewAccButton.Text = "Регистрация";
             this.NewAccButton.UseVisualStyleBackColor = true;
+            this.NewAccButton.Click += new System.EventHandler(this.NewAccButton_Click);
             // 
             // MainForm
             // 
