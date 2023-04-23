@@ -28,75 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.NameTB = new System.Windows.Forms.TextBox();
+            this.PassTb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.NewAccButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // NameTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 0;
+            this.NameTB.Location = new System.Drawing.Point(170, 115);
+            this.NameTB.Name = "NameTB";
+            this.NameTB.Size = new System.Drawing.Size(100, 23);
+            this.NameTB.TabIndex = 0;
             // 
-            // textBox2
+            // PassTb
             // 
-            this.textBox2.Location = new System.Drawing.Point(233, 157);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 1;
+            this.PassTb.Location = new System.Drawing.Point(170, 159);
+            this.PassTb.Name = "PassTb";
+            this.PassTb.Size = new System.Drawing.Size(100, 23);
+            this.PassTb.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(241, 165);
+            this.label1.Location = new System.Drawing.Point(170, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.Size = new System.Drawing.Size(49, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.label1.Text = "Пароль";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(179, 165);
+            this.label2.Location = new System.Drawing.Point(170, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.Size = new System.Drawing.Size(41, 15);
             this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.label2.Text = "Почта";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(204, 183);
+            this.button1.Location = new System.Drawing.Point(170, 188);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(90, 23);
             this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
+            this.button1.Text = "Войти";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // NewAccButton
             // 
-            this.button2.Location = new System.Drawing.Point(204, 212);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.NewAccButton.Location = new System.Drawing.Point(170, 217);
+            this.NewAccButton.Name = "NewAccButton";
+            this.NewAccButton.Size = new System.Drawing.Size(90, 23);
+            this.NewAccButton.TabIndex = 5;
+            this.NewAccButton.Text = "Регистрация";
+            this.NewAccButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 408);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(526, 362);
+            this.Controls.Add(this.NewAccButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PassTb);
+            this.Controls.Add(this.NameTB);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -106,11 +106,11 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox NameTB;
+        private TextBox PassTb;
         private Label label1;
         private Label label2;
         private Button button1;
-        private Button button2;
+        private Button NewAccButton;
     }
 }

@@ -6,7 +6,7 @@ namespace App
 {
     internal class Context : DbContext
     {
-        private const string ConnectionString = "Data\r\nSource=(localdb)\\\\mssqllocaldb;Initial Catalog=LibraryDb;Integrated\r\nSecurity=True;";
+        private const string ConnectionString = "Data\r\nSource=(localdb)\\\\mssqllocaldb;Initial Catalog=StoreDb;Integrated\r\nSecurity=True;";
 
         public DbSet<Client> Clients { get; set; }
         public DbSet<Selling> sellings { get; set; }
